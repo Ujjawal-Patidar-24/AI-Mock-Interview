@@ -33,7 +33,7 @@ A full-stack web application that lets users practice real interviews by talking
 1. Clone the repository
 
 ```bash
-   git clone https://github.com/YOUR-USERNAME/ai-mock-interview-platform.git
+   git clone https://github.com/Ujjawal-Patidar-24/AI-Mock-Interview.git
    cd ai-mock-interview-platform
 ```
 
@@ -55,10 +55,10 @@ A full-stack web application that lets users practice real interviews by talking
 4. Start the server
 
 ```bash
-   npm start
+   node server.js
 ```
 
-5. Open `http://localhost:3000` in your browser (Google Chrome recommended for speech features).
+5. Open `http://localhost:5000` in your browser (Google Chrome recommended for speech features).
 
 ## Author
 
