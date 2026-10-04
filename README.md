@@ -34,7 +34,7 @@ A full-stack web application that lets users practice real interviews by talking
 
 ```bash
    git clone https://github.com/Ujjawal-Patidar-24/AI-Mock-Interview.git
-   cd ai-mock-interview-platform
+   cd AI-Mock-Interview
 ```
 
 2. Install dependencies
