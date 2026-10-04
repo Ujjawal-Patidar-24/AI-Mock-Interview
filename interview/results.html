@@ -1,0 +1,107 @@
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interview Results</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="result.css">
+</head>
+<body>
+
+<div class="result-container">
+
+    <div class="result-header">
+        <h1>Interview Results</h1>
+        <p id="roleText">Frontend Developer • Intermediate</p>
+    </div>
+
+    <div class="score-section">
+    <div class="score-circle">
+        <svg width="220" height="220">
+            <circle class="bg-circle" cx="110" cy="110" r="90"></circle>
+            <circle class="progress-circle" cx="110" cy="110" r="90"></circle>
+        </svg>
+
+        <div class="score-content">
+            <h2 id="score">0</h2>
+            <span>/100</span>
+        </div>
+    </div>
+</div>
+
+    <div class="status">
+        <span id="status">PASSED ✅</span>
+    </div>
+
+    <div class="info-grid">
+
+        <div class="info-card">
+            <h3>Overall Feedback</h3>
+            <p id="feedback">
+                Good understanding of concepts and communication skills.
+            </p>
+        </div>
+
+        <div class="info-card">
+            <h3>Interview Details</h3>
+
+            <p>
+                <strong>Role:</strong>
+                <span id="role">Frontend Developer</span>
+            </p>
+
+            <p>
+                <strong>Difficulty:</strong>
+                <span id="difficulty">Intermediate</span>
+            </p>
+
+            <p>
+                <strong>Date:</strong>
+                <span id="date"></span>
+            </p>
+        </div>
+
+        <div class="info-card">
+            <h3>Strengths</h3>
+
+            <ul id="strengths">
+                <li>Communication Skills</li>
+                <li>Problem Solving</li>
+                <li>JavaScript Knowledge</li>
+            </ul>
+        </div>
+
+        <div class="info-card">
+            <h3>Areas For Improvement</h3>
+
+            <ul id="weaknesses">
+                <li>DSA Practice</li>
+                <li>System Design</li>
+                <li>Performance Optimization</li>
+            </ul>
+        </div>
+
+    </div>
+
+    <div class="buttons">
+
+        <button class="btn primary"
+            onclick="window.location.href='../interview/index.html'">
+            Start New Interview
+        </button>
+
+        <button class="btn secondary"
+            onclick="window.location.href='../dashboard/index.html'">
+            Back To Dashboard
+        </button>
+
+    </div>
+
+</div>
+
+<script src="result.js"></script>
+
+</body>
+</html>

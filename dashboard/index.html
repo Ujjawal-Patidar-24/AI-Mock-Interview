@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Mock Interview - Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-wrapper">
+
+        <!-- HEADER -->
+        <header class="dashboard-header">
+            <div class="profile-container">
+                <div class="avatar" id="candidate-avatar">U</div>
+                <div class="profile-text">
+                    <h1 id="candidate-name">Ujjawal</h1>
+                    <p id="candidate-tagline">Keep Practicing! 💪</p>
+                    <p id="candidate-last">Last Interview: May 23, 2025</p>
+                </div>
+            </div>
+
+            <div class="metrics-grid">
+                <div class="metric-card">
+                    <span class="metric-label">Average Score</span>
+                    <span class="metric-value" id="metric-avg-score">--</span>
+                    <div class="metric-progress-bar">
+                        <div class="metric-progress-fill" id="metric-avg-fill" style="width: 0%"></div>
+                    </div>
+                </div>
+                <div class="metric-card">
+                    <span class="metric-label">Total Interviews</span>
+                    <span class="metric-value" id="metric-total-int">--</span>
+                </div>
+                <div class="metric-card">
+                    <span class="metric-label">Success Rate</span>
+                    <span class="metric-value" id="metric-success-rate">--</span>
+                </div>
+            </div>
+            
+            <div class="start-btn-container">
+                <button class="start-interview-btn" onclick="window.location.href='../interview/index.html'">
+                    🎯 Start New Interview
+                </button>
+            </div>
+        </header>
+
+        <main class="dashboard-content">
+
+            <!-- PERFORMANCE GRAPH -->
+            <section class="graph-section">
+                <div class="section-header">
+                    <h2>Performance Trend</h2>
+                    <span class="section-subtitle">Click points to view interview details</span>
+                </div>
+                <div class="graph-container">
+                    <svg id="performance-chart" viewBox="0 0 1000 240" preserveAspectRatio="xMidYMid meet"></svg>
+                </div>
+            </section>
+
+            <!-- TIMELINE -->
+            <section class="timeline-section">
+                <div class="section-header">
+                    <h2>Interview Timeline</h2>
+                    <div class="timeline-controls">
+                        <button id="slide-left-btn" class="nav-arrow-btn">
+                            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"></polyline></svg>
+                        </button>
+                        <button id="slide-right-btn" class="nav-arrow-btn">
+                            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="timeline-slider-outer">
+                    <div class="timeline-slider-track" id="timeline-scroll-container">
+                        <div class="timeline-calendar-months" id="timeline-months-bar"></div>
+                        <div class="timeline-grid-lines" id="timeline-grid-bar"></div>
+                        <div class="timeline-nodes-container" id="timeline-nodes-bar"></div>
+                    </div>
+ 
+                    <!-- Tooltip -->
+                    <div class="timeline-tooltip" id="global-tooltip">
+                        <div class="tooltip-role" id="tooltip-company"></div>
+                        <div class="tooltip-date" id="tooltip-date"></div>
+                        <div class="tooltip-meta">
+                            <span class="tooltip-score" id="tooltip-score"></span>
+                            <span class="badge" id="tooltip-status"></span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- DETAIL PANEL -->
+            <section class="details-section">
+
+                <div class="details-card-placeholder" id="details-placeholder">
+                    <svg viewBox="0 0 24 24" width="48" height="48" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <line x1="12" y1="16" x2="12" y2="12"></line>
+                        <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                    </svg>
+                    <p>Click on any interview from the timeline or graph to view details</p>
+                </div>
+
+                <div class="details-card hidden" id="details-card">
+                    <div class="details-card-header">
+                        <div class="details-meta-left">
+                            <div class="details-logo-large" id="details-logo">F</div>
+                            <div>
+                                <h3 id="details-company">Frontend Developer</h3>
+                                <p id="details-role">Intermediate</p>
+                            </div>
+                        </div>
+                        <div class="details-meta-right">
+                            <div class="score-badge-large">
+                                <span class="score-num" id="details-score">--</span>
+                                <span class="score-denom">/100</span>
+                                <span class="score-rating" id="details-rating">Good</span>
+                            </div>
+                            <span class="badge large" id="details-status">Passed</span>
+                        </div>
+                    </div>
+
+                    <div class="details-body-grid">
+                        <div class="details-panel feedback-panel">
+                            <h4>General Feedback</h4>
+                            <p id="details-feedback"></p>
+                            <div class="details-date-info">
+                                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                                    <line x1="16" y1="2" x2="16" y2="6"></line>
+                                    <line x1="8" y1="2" x2="8" y2="6"></line>
+                                    <line x1="3" y1="10" x2="21" y2="10"></line>
+                                </svg>
+                                <span id="details-date-text"></span>
+                            </div>
+                        </div>
+
+                        <div class="details-panel strengths-panel">
+                            <h4>Key Strengths</h4>
+                            <ul id="details-strengths"></ul>
+                        </div>
+
+                        <div class="details-panel weaknesses-panel">
+                            <h4>Areas for Improvement</h4>
+                            <ul id="details-weaknesses"></ul>
+                        </div>
+                    </div>
+
+                    <div class="details-card-footer">
+                        <button class="btn btn-primary" id="view-chat-btn">
+                            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                            </svg>
+                            Explore Conversation Transcript
+                        </button>
+                    </div>
+                </div>
+
+            </section>
+        </main>
+    </div>
+
+    <!-- CHAT TRANSCRIPT MODAL -->
+    <div class="modal-overlay hidden" id="chat-modal">
+        <div class="modal-card">
+            <div class="modal-header">
+                <div class="modal-header-info">
+                    <div class="modal-logo" id="modal-company-logo">F</div>
+                    <div>
+                        <h3 id="modal-title">Interview Transcript</h3>
+                        <p id="modal-subtitle">Role • Date</p>
+                    </div>
+                </div>
+                <button class="modal-close-btn" id="close-modal-btn">
+                    <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2.5">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+
+            <div class="modal-body" id="chat-messages-container"></div>
+
+            <div class="modal-footer">
+                <button class="btn btn-secondary" id="close-modal-footer-btn">Close Transcript</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

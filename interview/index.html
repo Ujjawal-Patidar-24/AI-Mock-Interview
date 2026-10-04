@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Mock Interview</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    
+    <div class="screen" id="setup-screen">
+        <div class="setup-container">
+            <div class="setup-header">
+                <h1>Start New Interview</h1>
+                <p>Select your role and difficulty to begin</p>
+            </div>
+
+            <!-- Role Selection -->
+            <div class="selection-group">
+                <h3>Select Role</h3>
+                <div class="options-grid" id="role-options">
+                    <button class="option-btn" data-value="Frontend Developer"> Frontend Developer</button>
+                    <button class="option-btn" data-value="Backend Developer"> Backend Developer</button>
+                    <button class="option-btn" data-value="Data Analyst"> Data Analyst</button>
+                    <button class="option-btn" data-value="HR Round"> HR Round</button>
+                    <button class="option-btn" data-value="Full Stack Developer"> Full Stack Developer</button>
+                    <button class="option-btn" data-value="DevOps Engineer"> DevOps Engineer</button>
+                    <button class="option-btn" data-value="DSA Round"> DSA Round</button> 
+                </div>
+            </div>
+
+            <!-- Difficulty Selection -->
+            <div class="selection-group">
+                <h3>Select Difficulty</h3>
+                <div class="options-grid" id="difficulty-options">
+                    <button class="option-btn" data-value="Beginner">🟢 Beginner</button>
+                    <button class="option-btn" data-value="Intermediate">🟡 Intermediate</button>
+                    <button class="option-btn" data-value="Advanced">🔴 Advanced</button>
+                </div>
+            </div>
+
+            <button class="start-btn" id="start-btn" disabled>Start Interview →</button>
+        </div>
+    </div>
+
+    <!-- Main wali INTERVIEW screen -->
+    <div class="screen hidden" id="interview-screen">
+        <div class="interview-container">
+
+            <!-- Top Bar -->
+            <div class="interview-topbar">
+                <div class="interview-info">
+                    <span id="display-role">Frontend Developer</span>
+                    <span class="separator">•</span>
+                    <span id="display-difficulty">Intermediate</span>
+                </div>
+                <div class="timer" id="timer">12:00</div>
+                <button class="end-btn" id="end-btn">End Interview</button>
+            </div>
+
+            
+            <div class="question-box">
+                <div class="question-label">AI Interviewer</div>
+                <p id="question-text">Loading question...</p>
+            </div>
+
+            
+            <div class="answer-box">
+                <div class="answer-label">Your Answer</div>
+                <p id="answer-text">Your answer will appear here after speaking...</p>
+            </div>
+
+
+            <div class="controls">
+                <button class="mic-btn" id="mic-btn">Hold to Speak</button>
+                <button class="submit-btn" id="submit-btn" disabled>Submit Answer →</button>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="interview.js"></script>
+</body>
+</html>
+
+
+
+
+
+

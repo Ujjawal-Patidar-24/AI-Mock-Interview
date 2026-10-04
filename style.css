@@ -1,0 +1,261 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+html{
+    scroll-behavior: smooth;
+}
+/* NAVBAR */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
+    background: #0f0f1a;
+}
+
+.logo {
+    color: #7c6ff7;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 32px;
+}
+
+.nav-links a {
+    color: #aaa;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.nav-links a:hover {
+    color: #7c6ff7;
+}
+
+.nav-btns {
+    display: flex;
+    gap: 12px;
+}
+
+.nav-btn-login {
+    background: transparent;
+    color: white;
+    padding: 10px 22px;
+    border: 2px solid #7c6ff7;
+    border-radius: 8px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.nav-btn-login:hover {
+    background: #7c6ff711;
+}
+
+.nav-btn-signup {
+    background: #7c6ff7;
+    color: white;
+    padding: 10px 22px;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.nav-btn-signup:hover {
+    background: #6457e0;
+}
+
+
+/* HERO */
+.hero {
+    background: #0f0f1a;
+    color: white;
+    text-align: center;
+    padding: 100px 20px 80px;
+}
+
+.hero h1 {
+    font-size: 52px;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.hero h1 span {
+    color: #7c6ff7;
+}
+
+.hero p {
+    font-size: 18px;
+    color: #aaa;
+    margin-bottom: 40px;
+}
+
+.hero-btns {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+}
+
+.btn-primary {
+    background: #7c6ff7;
+    color: white;
+    padding: 14px 32px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.btn-secondary {
+    background: transparent;
+    color: white;
+    padding: 14px 32px;
+    border: 2px solid #7c6ff7;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.btn-primary:hover { background: #6457e0; }
+.btn-secondary:hover { background: #7c6ff711; }
+
+/* FEATURES */
+.features {
+    background: #13131f;
+    padding: 80px 60px;
+    text-align: center;
+}
+
+.features h2 {
+    color: white;
+    font-size: 36px;
+    margin-bottom: 50px;
+}
+
+.features h2 span {
+    color: #7c6ff7;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: #1e1e2e;
+    border: 1px solid #2a2a3d;
+    border-radius: 16px;
+    padding: 36px 28px;
+    width: 280px;
+    text-align: left;
+}
+
+.card-icon {
+    font-size: 36px;
+    margin-bottom: 16px;
+}
+
+.card h3 {
+    color: white;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.card p {
+    color: #888;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* HOW IT WORKS */
+.how {
+    background: #0f0f1a;
+    padding: 80px 60px;
+    text-align: center;
+}
+
+.how h2 {
+    color: white;
+    font-size: 36px;
+    margin-bottom: 50px;
+}
+
+.how h2 span { color: #7c6ff7; }
+
+.steps {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.step {
+    background: #1e1e2e;
+    border-radius: 12px;
+    padding: 28px 24px;
+    width: 200px;
+    text-align: center;
+}
+
+.step-num {
+    background: #7c6ff7;
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    margin: 0 auto 14px;
+}
+
+.step h4 { color: white; font-size: 15px; }
+
+/* CTA */
+.cta {
+    background: #7c6ff7;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.cta h2 {
+    color: white;
+    font-size: 36px;
+    margin-bottom: 16px;
+}
+
+.cta p {
+    color: #ddd;
+    margin-bottom: 32px;
+    font-size: 16px;
+}
+
+.cta-btn {
+    background: white;
+    color: #7c6ff7;
+    padding: 14px 36px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+/* FOOTER */
+footer {
+    background: #0f0f1a;
+    color: #555;
+    text-align: center;
+    padding: 24px;
+    font-size: 14px;
+}
